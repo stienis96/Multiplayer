@@ -98,7 +98,7 @@ public class ServerSend
             }
             else
             {
-                packet.Write(player.lastAppliedTickTime - (Time.time - player.serverPacketTime) + TickManager.lag); // Calc time processing on server (and in queue)
+                packet.Write(player.lastAppliedTickTime - (Time.time - player.serverPacketTime)); // Calc time processing on server (and in queue)
             }
 
             SendUDPDataToAll(packet);
